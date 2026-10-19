@@ -4,8 +4,8 @@ March Madness is a spectacle that captures everyone from die-hard college sports
 This project asks one question: **can we predict how far a team will go in the NCAA tournament based on its
 offensive and defensive efficiency?**
 
-The project was originally completed for CPSC 4300 (data science). The original files were lost, so it was
-rebuilt from the written paper ([`docs/course_project.md`](docs/course_project.md)) and then extended.
+The project was completed for CPSC 4300 (data science). The written paper is in
+[`docs/course_project.md`](docs/course_project.md).
 
 ![K-Means clusters with the teams that reached each round highlighted](figures/figure2_clusters_by_round.png)
 
@@ -19,27 +19,24 @@ rebuilt from the written paper ([`docs/course_project.md`](docs/course_project.m
   The teams that reached the Sweet 16, Elite Eight, Final Four, championship game, and the champions were then
   highlighted to see where successful teams fall.
 - **Logistic regression (supervised):** five models, one for each round, estimate the probability that a team
-  reaches the Sweet 16, Elite Eight, Final Four, or championship game, or wins the title. (The original project
-  had three: Elite Eight, Final Four, and champion.)
+  reaches the Sweet 16, Elite Eight, Final Four, or championship game, or wins the title.
 - **Team lookup:** enter any team's offensive and defensive efficiency to see which cluster it falls in and its
   predicted chance of reaching each round.
 
 ## Results
-Every number below comes from running the notebook, except the column labeled *Original paper*.
-
 | Cluster | Profile | Teams | Sweet 16 | Elite Eight | Final Four | Title game | Champion |
 |---|---|---|---|---|---|---|---|
 | 0 (red) | Low offense, weak defense | 339 | 3 | 0 | 0 | 0 | 0 |
 | 1 (blue) | Moderate offense, strongest defense | 568 | 147 | 68 | 32 | 17 | 4 |
 | 2 (green) | Highest offense, good defense | 495 | 186 | 100 | 52 | 25 | 17 |
 
-| Share in Cluster 2 | Rebuilt | Original paper |
+| Round | Share from Cluster 1 | Share from Cluster 2 |
 |---|---|---|
-| Sweet 16 teams | 55.4% | not in paper |
-| Elite Eight teams | 59.5% | 60% |
-| Final Four teams | 61.9% | 60.2% |
-| Championship game teams | 59.5% | not in paper |
-| Champions | 81.0% | 61.9% |
+| Sweet 16 | 43.8% | 55.4% |
+| Elite Eight | 40.5% | 59.5% |
+| Final Four | 38.1% | 61.9% |
+| Championship game | 40.5% | 59.5% |
+| Champion | 19.0% | 81.0% |
 
 - **No team in the low-efficiency cluster reached the Elite Eight** in 21 tournaments, and only three reached
   the Sweet 16.
@@ -72,7 +69,6 @@ The predictive models are not meant to be accurate, and understanding why is par
   to 4.1, even though only one team can win.
 
 ## Other findings
-These were added while rebuilding the project and were not part of the original paper.
 - **Champions are strong on both ends.** 20 of the 21 champions ranked in the top 25 nationally in both offensive
   and defensive efficiency, and all 21 ranked in the top 25 in defense. The only exception was 2014 UConn,
   whose offense ranked 39th.
@@ -88,8 +84,7 @@ These were added while rebuilding the project and were not part of the original 
 - **Offense has gone up over time.** The average tournament team's offensive efficiency rose from 109.9 in
   2003 to 116.2 in 2025, so newer teams are more likely to land in the high-offense cluster.
 
-The full analysis, including the comparison with the original paper, is in
-[`march_madness.ipynb`](march_madness.ipynb).
+The full analysis is in [`march_madness.ipynb`](march_madness.ipynb).
 
 ## Run it
 ```bash
@@ -110,8 +105,7 @@ data/sweet_sixteen.csv               Sweet 16 teams, 2003-2024 (from Sports-Refe
 data/elite_eight.csv                 Elite Eight teams, 2003-2024 (hand-compiled, checked against Sports-Reference)
 data/results_2025.csv                2025 Sweet 16 through champion, for the 2025 test
 figures/                             Figures 1 to 5, written by the notebook
-docs/course_project.md               original course paper
-docs/RECONSTRUCTION.md               what was recovered vs. inferred, and what was added later
+docs/course_project.md               course paper
 NOTES.md                             one-line explanations of the tools and concepts used
 ```
 

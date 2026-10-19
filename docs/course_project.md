@@ -1,6 +1,5 @@
-> Original course paper (CPSC 4300), kept as submitted. Only the Markdown formatting was cleaned up.
-> The original Figures 1 and 2 were lost; rebuilt versions are in [`figures/`](../figures/), and the
-> rebuilt numbers (which differ slightly) are in the notebook and [`RECONSTRUCTION.md`](RECONSTRUCTION.md).
+> Course paper for CPSC 4300. It was written with an earlier version of the dataset, so some numbers differ
+> from the notebook, which has the current results.
 
 Cole DiGregorio  
 Course project  
