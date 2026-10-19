@@ -43,9 +43,30 @@ Every number below comes from running the notebook, except the column labeled *O
 - The models show high accuracy (89% to 99%), but mainly because most teams do not advance. They struggle to
   identify the actual successful teams because there are so few of them.
 
+![Tournament success rate by cluster](figures/figure3_success_by_cluster.png)
+
 Thus, efficiency is a useful filter for finding contenders when filling out a bracket, but it cannot pick a
-champion on its own. The full analysis, the comparison with the original paper, and a `predict_team()` helper for
-trying out any team's numbers are in [`march_madness.ipynb`](march_madness.ipynb).
+champion on its own.
+
+## Other findings
+These were added while rebuilding the project and were not part of the original paper.
+- **Champions are strong on both ends.** 20 of the 21 champions ranked in the top 25 nationally in both offensive
+  and defensive efficiency, and all 21 ranked in the top 25 in defense. The only exception was 2014 UConn,
+  whose offense ranked 39th.
+- **The low-efficiency cluster is mostly low seeds.** 310 of the 339 teams in Cluster 0 were 13 to 16 seeds.
+  Seeding turns out to be a sharper signal than the clusters: 1 seeds reached the Elite Eight 63.1% of the time,
+  compared to 20.2% for Cluster 2 teams.
+- **Cinderella teams.** 2022 Saint Peter's, a 15 seed, reached the Elite Eight with by far the weakest numbers
+  of any Elite Eight team in the study.
+- **A test on the 2025 tournament.** Using only pre-tournament numbers, the models' top eight Elite Eight picks
+  were exactly the Elite Eight, and the top four Final Four picks were exactly the Final Four. The top champion
+  pick was Duke; the actual champion, Florida, was second. However, 2025 was an unusually predictable year, with
+  all four 1 seeds reaching the Final Four, so one tournament is not enough to judge the models.
+- **Offense has gone up over time.** The average tournament team's offensive efficiency rose from 109.9 in
+  2003 to 116.2 in 2025, so newer teams are more likely to land in the high-offense cluster.
+
+The full analysis, the comparison with the original paper, and a `predict_team()` helper for trying out any
+team's numbers are in [`march_madness.ipynb`](march_madness.ipynb).
 
 ## Run it
 ```bash
@@ -62,7 +83,8 @@ To re-run everything from the terminal: `jupyter nbconvert --to notebook --execu
 march_madness.ipynb                  analysis notebook (data cleaning, K-Means, logistic regression, results)
 data/march_madness_kaggle_v31.csv    Kaggle dataset, version 31 (MIT license)
 data/elite_eight.csv                 hand-compiled Elite Eight teams, 2003-2024
-figures/                             Figures 1 and 2, written by the notebook
+data/results_2025.csv                hand-compiled 2025 Elite Eight, Final Four, and champion
+figures/                             Figures 1 to 4, written by the notebook
 docs/course_project.md               original course paper
 docs/RECONSTRUCTION.md               what was recovered vs. inferred, and differences from the paper
 NOTES.md                             one-line explanations of the tools and concepts used
@@ -71,11 +93,12 @@ NOTES.md                             one-line explanations of the tools and conc
 ## Limitations
 K-Means assumes the clusters are spherical and does not use tournament outcomes. The logistic models reduce the
 tournament to yes/no outcomes, ignore matchups and seeding, and assume a linear relationship with the log odds
-of success. The efficiency numbers are end-of-season values, so they include tournament games.
+of success. The efficiency numbers are end-of-season values, so they include tournament games. Offensive
+efficiency has also risen over the years, which shifts newer teams toward the high-offense cluster.
 
 ## Data and credits
 - Pilafas, J. *March Madness Historical Dataset*, Kaggle (MIT license), built from [KenPom](https://kenpom.com)
   ratings. https://www.kaggle.com/datasets/jonathanpilafas/2024-march-madness-statistical-analysis
-- Elite Eight teams checked against [Sports-Reference](https://www.sports-reference.com/cbb/) brackets.
+- Elite Eight teams and 2025 results checked against [Sports-Reference](https://www.sports-reference.com/cbb/) brackets.
 
 Tools: Python, pandas, scikit-learn, matplotlib, Jupyter.

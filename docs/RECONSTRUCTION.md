@@ -51,3 +51,12 @@ results are identical.
 - Added a success-rate-by-cluster table, an odds-ratio table, and a `predict_team()` helper.
 - Logistic models are trained once and reused (the example cell previously retrained them).
 - Paper Markdown cleaned up so it renders correctly on GitHub; its wording is unchanged.
+
+## Extra findings (not in the original project)
+Added in section 4 of the notebook. These do not change any of the original analysis or results.
+- Champions' national offense/defense ranks (from the dataset's rank columns).
+- The eight weakest Elite Eight teams by net efficiency ("Cinderella" teams).
+- Seed vs. cluster comparison and success rate by seed (Figures 3 and 4).
+- A test on the 2025 tournament using pre-tournament efficiencies. The dataset has no 2025 results yet, so
+  `data/results_2025.csv` was compiled by hand and checked against Sports-Reference. 2026 could not be tested
+  because its pre-tournament numbers are missing from the dataset.

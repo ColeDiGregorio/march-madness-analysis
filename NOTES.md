@@ -38,3 +38,12 @@
 - **Odds ratio (`np.exp(coef)`)**: turns a log-odds coefficient into "odds multiply by X per +1 point".
 - **`predict_team()`**: a small function that reuses the trained models to score any team's numbers.
 - **`plt.rcParams`**: global chart settings (size, gridlines) set once, so every figure looks the same.
+
+## Extra findings pass
+- **Out-of-sample test**: checking a model on data it never trained on (here, the 2025 tournament).
+- **Pre-tournament numbers**: stats as of Selection Sunday, so the 2025 test only uses what a fan would actually have.
+- **`pd.crosstab`**: counts how often each pair of values appears, like a SQL `GROUP BY a, b` with `COUNT(*)` laid out as a grid.
+- **`pd.cut`**: puts numbers into ranges (seeds 1-4, 5-8, ...), like a SQL `CASE WHEN` bucket.
+- **`nsmallest` / `nlargest`**: the n rows with the lowest / highest value in a column, like `ORDER BY ... LIMIT n`.
+- **`merge(..., how="left")`**: a LEFT JOIN; teams with no 2025 result get NaN, which is filled with 0.
+- **Drift over time**: averages can change from year to year (offense went up), so clusters built on old years may not fit new ones.
