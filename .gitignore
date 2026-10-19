@@ -1,0 +1,9 @@
+# Python virtual environment (each person makes their own)
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# macOS clutter
+.DS_Store
+# secrets, just in case
+.env
+kaggle.json

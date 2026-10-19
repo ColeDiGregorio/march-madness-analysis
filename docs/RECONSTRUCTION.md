@@ -1,0 +1,43 @@
+# Reconstruction note
+
+The original project files (code, data and figures) were lost. This rebuild is based only on the written paper
+(`docs/course_project.md`) and a description of the project (`docs/prompt.md`). **It is not claimed to be identical to the original.**
+
+## Verified from the paper
+- Data source: Kaggle *March Madness Historical Dataset* (Jonathan Pilafas), KenPom metrics.
+- Study period: 2003–2024 tournament teams. Features: adjusted offensive and adjusted defensive efficiency only.
+- Non-tournament teams are removed using a per-year list of tournament teams.
+- A separate table of Elite Eight, Final Four and champion teams.
+- K-Means with k = 3, fit on the two efficiency features only, plotted with red/blue/green clusters (Figure 1)
+  and successful teams overlaid (Figure 2).
+- Three logistic regressions (Elite Eight, Final Four, Champion), each with the same two features.
+
+## Inferred (labeled assumptions)
+| Decision | Choice | Why |
+|---|---|---|
+| Dataset version | v31 (downloaded Oct 2026, now covers 2002–2026) | The version used in 2025 isn't available; v31 is pinned in `data/`. |
+| Efficiency columns | `Adjusted Offensive/Defensive Efficiency` (end of season) | Name matches the paper. The file also has KenPom `AdjOE`/`AdjDE`, which differ by ≤1 point, and pre-tournament versions. |
+| Tournament team list | Dataset's `Post-Season Tournament == "March Madness"` | The paper says the list was "compiled" but not where from. |
+| Final Four / champions | Dataset's `Final Four?` / `Tournament Winner?` flags | All 21 years checked against real results. |
+| Elite Eight | Hand-compiled in `data/elite_eight.csv` | Not in the dataset. All 84 regional-final losers checked against Sports-Reference brackets. |
+| Feature scaling | None (raw efficiencies) | Coefficients near 0.3 per point only fit unscaled features. |
+| K-Means settings | `random_state=42, n_init=10` | Unknown; results agree 97–100% across seeds 0–19. |
+| Cluster numbering | Ordered by net efficiency of cluster centers (0 weakest, 2 strongest) | Matches the paper's descriptions; uses no outcomes. |
+| Logistic settings | scikit-learn defaults, 80/20 split, `random_state=42`, no stratification | Simplest choice. The paper's coefficients fall inside the range from 50 random splits. |
+
+## Minor corrections
+- `max_iter=1000` on LogisticRegression so it converges on unscaled features.
+- Dropped one duplicate row (2017 South Dakota State, listed as both NCAA and NIT in the source file).
+
+## Known data quirks (left as is)
+- 2015: Albany is missing from the combined file because of a spelling bug ("Ualbany"), so there are 67 teams.
+- 2023: the source tournament list has 67 teams (one 11 seed missing).
+- Neither affects Elite Eight, Final Four or champion counts (168 / 84 / 21).
+
+## How the results compare
+- Elite Eight and Final Four cluster splits are within about 2 points of the paper. Cluster 0 has no successful teams, as in the paper.
+- **Champions differ:** 19.0% / 81.0% (Cluster 1 / 2) rebuilt vs. 38.1% / 61.9% in the paper. The cause can't be
+  confirmed without the original code. A different dataset version, cluster seed or champion list could each
+  explain it. (The paper's champion figure equals 8 of 21 teams. The rebuilt *Final Four* split is also exactly 38.1% / 61.9%.)
+- Cluster 2's average defense is not the best of the three in this run (Cluster 1's is), unlike the paper's wording.
+- The logistic coefficients have the same signs and similar sizes to the paper's (within about 0.04).
