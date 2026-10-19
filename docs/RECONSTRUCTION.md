@@ -56,7 +56,19 @@ results are identical.
 Added in section 4 of the notebook. These do not change any of the original analysis or results.
 - Champions' national offense/defense ranks (from the dataset's rank columns).
 - The eight weakest Elite Eight teams by net efficiency ("Cinderella" teams).
-- Seed vs. cluster comparison and success rate by seed (Figures 3 and 4).
+- Success rate by cluster (Figure 3), and seed vs. cluster comparison with success rate by seed (Figure 5).
 - A test on the 2025 tournament using pre-tournament efficiencies. The dataset has no 2025 results yet, so
   `data/results_2025.csv` was compiled by hand and checked against Sports-Reference. 2026 could not be tested
   because its pre-tournament numbers are missing from the dataset.
+
+## Sweet 16, championship game, and team lookup (not in the original project)
+- Two more rounds: Sweet 16 (`data/sweet_sixteen.csv`, taken from Sports-Reference brackets: 16 teams per year,
+  every name matched to the dataset, every Elite Eight team included) and championship game (the dataset's
+  `Tournament Championship?` flag, checked: 2 teams per year, both Final Four teams, champion always included).
+- Five logistic models instead of three, with the same settings. The original three models and their
+  coefficients are unchanged.
+- The evaluation now shows a compact table with "accuracy if always guessing no" next to each model's accuracy.
+- `where_is_team()` places any team on the cluster chart with its predicted chance of reaching each round.
+- Figure 2 was redesigned as one panel per round (shaded cluster areas, flipped defense axis) because the single
+  overlay chart was too cluttered. The seed chart is now a line chart.
+- `data/results_2025.csv` now covers the Sweet 16 through the champion.

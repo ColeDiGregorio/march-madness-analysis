@@ -1,0 +1,337 @@
+Season,Team
+2003,Oklahoma
+2003,Butler
+2003,Syracuse
+2003,Auburn
+2003,Kentucky
+2003,Wisconsin
+2003,Marquette
+2003,Pittsburgh
+2003,Texas
+2003,UConn
+2003,Maryland
+2003,Michigan State
+2003,Arizona
+2003,Notre Dame
+2003,Duke
+2003,Kansas
+2004,Duke
+2004,Illinois
+2004,Texas
+2004,Xavier
+2004,Saint Joseph's
+2004,Wake Forest
+2004,Pittsburgh
+2004,Oklahoma State
+2004,Alabama
+2004,Syracuse
+2004,Vanderbilt
+2004,UConn
+2004,UAB
+2004,Kansas
+2004,Georgia Tech
+2004,Nevada
+2005,Washington
+2005,Louisville
+2005,Texas Tech
+2005,West Virginia
+2005,Duke
+2005,Michigan State
+2005,Utah
+2005,Kentucky
+2005,Illinois
+2005,Milwaukee
+2005,Arizona
+2005,Oklahoma State
+2005,North Carolina
+2005,Villanova
+2005,Wisconsin
+2005,NC State
+2006,Duke
+2006,LSU
+2006,West Virginia
+2006,Texas
+2006,Villanova
+2006,Boston College
+2006,Florida
+2006,Georgetown
+2006,Memphis
+2006,Bradley
+2006,Gonzaga
+2006,UCLA
+2006,UConn
+2006,Washington
+2006,George Mason
+2006,Wichita State
+2007,North Carolina
+2007,USC
+2007,Vanderbilt
+2007,Georgetown
+2007,Florida
+2007,Butler
+2007,Oregon
+2007,UNLV
+2007,Ohio State
+2007,Tennessee
+2007,Texas A&M
+2007,Memphis
+2007,Kansas
+2007,Southern Illinois
+2007,Pittsburgh
+2007,UCLA
+2008,North Carolina
+2008,Washington State
+2008,Louisville
+2008,Tennessee
+2008,Kansas
+2008,Villanova
+2008,Wisconsin
+2008,Davidson
+2008,Memphis
+2008,Michigan State
+2008,Stanford
+2008,Texas
+2008,UCLA
+2008,Western Kentucky
+2008,Xavier
+2008,West Virginia
+2009,Pittsburgh
+2009,Xavier
+2009,Villanova
+2009,Duke
+2009,Louisville
+2009,Arizona
+2009,Kansas
+2009,Michigan State
+2009,North Carolina
+2009,Gonzaga
+2009,Syracuse
+2009,Oklahoma
+2009,UConn
+2009,Purdue
+2009,Missouri
+2009,Memphis
+2010,Kentucky
+2010,Cornell
+2010,Washington
+2010,West Virginia
+2010,Northern Iowa
+2010,Michigan State
+2010,Tennessee
+2010,Ohio State
+2010,Duke
+2010,Purdue
+2010,Baylor
+2010,Saint Mary's
+2010,Syracuse
+2010,Butler
+2010,Xavier
+2010,Kansas State
+2011,Ohio State
+2011,Kentucky
+2011,Marquette
+2011,North Carolina
+2011,Butler
+2011,Wisconsin
+2011,BYU
+2011,Florida
+2011,Kansas
+2011,Richmond
+2011,VCU
+2011,Florida State
+2011,Duke
+2011,Arizona
+2011,UConn
+2011,San Diego State
+2012,Syracuse
+2012,Wisconsin
+2012,Cincinnati
+2012,Ohio State
+2012,North Carolina
+2012,Ohio
+2012,NC State
+2012,Kansas
+2012,Kentucky
+2012,Indiana
+2012,Baylor
+2012,Xavier
+2012,Michigan State
+2012,Louisville
+2012,Marquette
+2012,Florida
+2013,Indiana
+2013,Syracuse
+2013,Marquette
+2013,Miami
+2013,Louisville
+2013,Oregon
+2013,Michigan State
+2013,Duke
+2013,Kansas
+2013,Michigan
+2013,Florida
+2013,Florida Gulf Coast
+2013,Wichita State
+2013,La Salle
+2013,Arizona
+2013,Ohio State
+2014,Virginia
+2014,Michigan State
+2014,Iowa State
+2014,UConn
+2014,Kentucky
+2014,Louisville
+2014,Tennessee
+2014,Michigan
+2014,Florida
+2014,UCLA
+2014,Dayton
+2014,Stanford
+2014,Arizona
+2014,San Diego State
+2014,Baylor
+2014,Wisconsin
+2015,NC State
+2015,Louisville
+2015,Oklahoma
+2015,Michigan State
+2015,Kentucky
+2015,West Virginia
+2015,Notre Dame
+2015,Wichita State
+2015,Duke
+2015,Utah
+2015,UCLA
+2015,Gonzaga
+2015,Wisconsin
+2015,North Carolina
+2015,Xavier
+2015,Arizona
+2016,North Carolina
+2016,Indiana
+2016,Notre Dame
+2016,Wisconsin
+2016,Virginia
+2016,Iowa State
+2016,Gonzaga
+2016,Syracuse
+2016,Kansas
+2016,Maryland
+2016,Miami
+2016,Villanova
+2016,Oregon
+2016,Duke
+2016,Texas A&M
+2016,Oklahoma
+2017,Wisconsin
+2017,Florida
+2017,Baylor
+2017,South Carolina
+2017,Kansas
+2017,Purdue
+2017,Oregon
+2017,Michigan
+2017,North Carolina
+2017,Butler
+2017,UCLA
+2017,Kentucky
+2017,Gonzaga
+2017,West Virginia
+2017,Xavier
+2017,Arizona
+2018,Villanova
+2018,West Virginia
+2018,Texas Tech
+2018,Purdue
+2018,Kansas
+2018,Clemson
+2018,Syracuse
+2018,Duke
+2018,Kansas State
+2018,Kentucky
+2018,Loyola Chicago
+2018,Nevada
+2018,Florida State
+2018,Gonzaga
+2018,Michigan
+2018,Texas A&M
+2019,Duke
+2019,Virginia Tech
+2019,LSU
+2019,Michigan State
+2019,North Carolina
+2019,Auburn
+2019,Houston
+2019,Kentucky
+2019,Virginia
+2019,Oregon
+2019,Purdue
+2019,Tennessee
+2019,Gonzaga
+2019,Florida State
+2019,Texas Tech
+2019,Michigan
+2021,Michigan
+2021,Florida State
+2021,UCLA
+2021,Alabama
+2021,Loyola Chicago
+2021,Oregon State
+2021,Syracuse
+2021,Houston
+2021,Baylor
+2021,Villanova
+2021,Arkansas
+2021,Oral Roberts
+2021,Gonzaga
+2021,Creighton
+2021,USC
+2021,Oregon
+2022,North Carolina
+2022,UCLA
+2022,Purdue
+2022,Saint Peter's
+2022,Kansas
+2022,Providence
+2022,Iowa State
+2022,Miami
+2022,Arizona
+2022,Houston
+2022,Michigan
+2022,Villanova
+2022,Gonzaga
+2022,Arkansas
+2022,Texas Tech
+2022,Duke
+2023,Florida Atlantic
+2023,Tennessee
+2023,Kansas State
+2023,Michigan State
+2023,Houston
+2023,Miami
+2023,Xavier
+2023,Texas
+2023,Alabama
+2023,San Diego State
+2023,Creighton
+2023,Princeton
+2023,Arkansas
+2023,UConn
+2023,Gonzaga
+2023,UCLA
+2024,UConn
+2024,San Diego State
+2024,Illinois
+2024,Iowa State
+2024,Purdue
+2024,Gonzaga
+2024,Creighton
+2024,Tennessee
+2024,Houston
+2024,Duke
+2024,NC State
+2024,Marquette
+2024,North Carolina
+2024,Alabama
+2024,Clemson
+2024,Arizona

@@ -47,3 +47,12 @@
 - **`nsmallest` / `nlargest`**: the n rows with the lowest / highest value in a column, like `ORDER BY ... LIMIT n`.
 - **`merge(..., how="left")`**: a LEFT JOIN; teams with no 2025 result get NaN, which is filled with 0.
 - **Drift over time**: averages can change from year to year (offense went up), so clusters built on old years may not fit new ones.
+
+## Sweet 16, title game, team lookup, and new charts
+- **Small multiples (`plt.subplots(2, 3)`)**: several small charts side by side instead of one crowded chart; one panel per round.
+- **`np.meshgrid` + `contourf`**: score a fine grid of points with K-Means and color the background by cluster, so each cluster's area is visible.
+- **Flipped axis (`set_ylim(high, low)`)**: puts better defense (lower numbers) at the top, so the best teams are always top right.
+- **`predict_proba`**: a fitted model's probability for each row; `[:, 1]` is the chance of "yes".
+- **Baseline accuracy**: the score from always guessing the most common answer ("no"); a model should beat it to be useful.
+- **Separate models per round**: each is fit on its own, so nothing forces round-by-round chances to go down.
+- **`barh`**: horizontal bar chart, used for a team's chance of reaching each round.
