@@ -30,3 +30,11 @@
 ## Results
 - **matplotlib scatter**: one dot per team; `plt.savefig` writes the PNG into `figures/`.
 - **Original vs. rebuilt numbers**: the paper's numbers are labeled "Original paper"; everything else comes from running the notebook.
+
+## Improvements pass
+- **Leading tab in Markdown**: a line starting with a tab (or 4 spaces) renders as a code block on GitHub.
+- **Two trailing spaces in Markdown**: forces a line break, which is how the paper's name/course header stays on separate lines.
+- **Success rate by cluster**: share of a cluster's teams that reached each round (`groupby("Cluster").mean()` on 1/0 columns).
+- **Odds ratio (`np.exp(coef)`)**: turns a log-odds coefficient into "odds multiply by X per +1 point".
+- **`predict_team()`**: a small function that reuses the trained models to score any team's numbers.
+- **`plt.rcParams`**: global chart settings (size, gridlines) set once, so every figure looks the same.
