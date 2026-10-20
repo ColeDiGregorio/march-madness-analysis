@@ -45,3 +45,4 @@ This study showed that offensive and defensive efficiency are key predictors of 
 Ota, K. (2025, March 24). *24.4 million brackets: ESPN Tournament Challenge sets new record for third consecutive year*. ESPN Press Room U.S. [https\://espnpressroom.com/us/press-releases/2025/03/24-4-million-brackets-espn-tournament-challenge-sets-new-record-for-third-consecutive-year](https://espnpressroom.com/us/press-releases/2025/03/24-4-million-brackets-espn-tournament-challenge-sets-new-record-for-third-consecutive-year) 
 
 Pilafas, J. (2025, April 22). *March Madness historical dataset (2002 to 2025\)*. Kaggle. [https\://www\.kaggle.com/datasets/jonathanpilafas/2024-march-madness-statistical-analysis](https://www.kaggle.com/datasets/jonathanpilafas/2024-march-madness-statistical-analysis)
+--
